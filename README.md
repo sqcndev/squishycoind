@@ -1,6 +1,6 @@
 # Squishy Core
 
-![](./doc/imgs/squishy-logo2.png)
+![](./doc/imgs/squishy-logo.png)
 
 Squishy Core is the native daemon for SQCN. It's available for three OS platforms - Windows, Linux, MacOS.
 
