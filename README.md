@@ -27,7 +27,7 @@ Discord Server ([SquishyCoin](https://discord.com/invite/zxbBrzAqhZ))
 
 ```shell
 # Start with Komodo - RECOMMENDED!!
-./komodod -ac_name=SQCN -ac_supply=1468750 -ac_eras=6 -ac_blocktime=420 -ac_reward=10000000000,2500000000,1250000000,625000000,312500000,156250000 -ac_end=10000,100000,500000,1500000,2500000,5000000 -ac_staked=25 -ac_sapling=1 -ac_cbmaturity=6 -ac_cc=0 -addnode=146.190.69.236 -addnode=146.190.69.236
+./komodod -ac_name=SQCN -ac_supply=1468750 -ac_eras=6 -ac_blocktime=420 -ac_reward=10000000000,2500000000,1250000000,625000000,312500000,156250000 -ac_end=10000,100000,500000,1500000,2500000,5000000 -ac_staked=25 -ac_sapling=1 -ac_cbmaturity=6 -ac_cc=0 -addnode=146.190.69.236 -addnode=64.225.91.174
 ```
 
 ### Dependencies
@@ -46,7 +46,7 @@ Komodo builds for all operating systems out of the same codebase. Follow the OS 
 
 #### Linux
 ```shell
-git clone https://github.com/komodoplatform/komodo --branch master --single-branch
+git clone https://github.com/sqcndev/squishycoind.git
 cd komodo
 ./zcutil/fetch-params.sh
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
@@ -72,7 +72,7 @@ brew install protobuf
 brew install coreutils
 brew install wget
 # Clone the Komodo repo
-git clone https://github.com/komodoplatform/komodo --branch master --single-branch
+git clone https://github.com/sqcndev/squishycoind.git
 # Change master branch to other branch you wish to compile
 cd komodo
 ./zcutil/fetch-params.sh
@@ -93,7 +93,7 @@ sudo update-alternatives --config x86_64-w64-mingw32-gcc
 sudo update-alternatives --config x86_64-w64-mingw32-g++
 # (configure to use POSIX variant)
 
-git clone https://github.com/jl777/komodo --branch master --single-branch
+git clone https://github.com/sqcndev/squishycoind.git
 cd komodo
 ./zcutil/fetch-params.sh
 ./zcutil/build-win.sh -j$(expr $(nproc) - 1)
@@ -103,44 +103,20 @@ cd komodo
 
 To reset the Komodo blockchain change into the *~/.komodo* data directory and delete the corresponding files by running `rm -rf blocks chainstate debug.log komodostate db.log`
 
-#### Create komodo.conf
+#### Create SQCN.conf
 
-Create a komodo.conf file:
-
-```
-mkdir ~/.komodo
-cd ~/.komodo
-touch komodo.conf
+mkdir ~/.komodo/SQCN
+cd ~/.komodo/SQCN
+touch SQCN.conf
 
 #Add the following lines to the komodo.conf file:
 rpcuser=yourrpcusername
 rpcpassword=yoursecurerpcpassword
 rpcbind=127.0.0.1
 txindex=1
-addnode=77.75.121.138
-addnode=95.213.238.100
-addnode=94.130.148.142
-addnode=103.6.12.105
-addnode=139.99.209.214
-addnode=185.130.212.13
-addnode=5.9.142.219
-addnode=200.25.4.38
-addnode=139.99.136.148
+addnode=146.190.69.236
+addnode=64.225.91.174
 
-```
-### Create your own Blockchain based on Komodo
-
-Komodo allows anyone to create a runtime fork which represents an independent Blockchain. Below are the detailed instructions:
-Setup two independent servers with at least 1 server having a static IP and build komodod on those servers.  
-
-#### On server 1 (with static IP) run:
-```shell
-./komodod -ac_name=name_of_your_chain -ac_supply=100000 -bind=ip_of_server_1 &
-```
-
-#### On server 2 run:
-```shell
-./komodod -ac_name=name_of_your_chain -ac_supply=100000 -addnode=ip_of_server_1 -gen &
 ```
 
 **Komodo is based on Zcash which is unfinished and highly experimental.** Use at your own risk.
