@@ -101,7 +101,7 @@ cd komodo
 To reset the Squishy blockchain change into the *~/.komodo/SQCN* data directory and delete the corresponding files by running `rm -rf blocks chainstate debug.log komodostate db.log`
 
 #### Create SQCN.conf
-
+```
 mkdir ~/.komodo/SQCN
 cd ~/.komodo/SQCN
 touch SQCN.conf
