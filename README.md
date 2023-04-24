@@ -14,7 +14,7 @@ Use the following scripts to build:
 
 ## Tech Specification
 - 23,000,000 max coin amount
-- 100 coin block reward for era 1 (6 total eras 100, 25, 12.5, 6.25, 3.125, 1.5625)
+- 25 coin block reward for era 2, current (6 total eras 100, 25, 12.5, 6.25, 3.125, 1.5625)
 - 7 min block time
 - 25% staking rewards
 - Mining Algorithm: Equihash 200,9
