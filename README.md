@@ -1,62 +1,34 @@
-[![Build Status](https://travis-ci.org/KomodoPlatform/komodo.svg?branch=master)](https://travis-ci.org/KomodoPlatform/komodo)
-[![Version](https://img.shields.io/github/v/release/komodoplatform/komodo)](https://github.com/KomodoPlatform/komodo/releases)
-[![Issues](https://img.shields.io/github/issues-raw/komodoplatform/komodo)](https://github.com/KomodoPlatform/komodo/issues)
-[![PRs](https://img.shields.io/github/issues-pr-closed/komodoplatform/komodo)](https://github.com/KomodoPlatform/komodo/pulls)
-[![Commits](https://img.shields.io/github/commit-activity/y/komodoplatform/komodo)](https://github.com/KomodoPlatform/komodo/commits/dev)
-[![Contributors](https://img.shields.io/github/contributors/komodoplatform/komodo)](https://github.com/KomodoPlatform/komodo/graphs/contributors)
-[![Last Commit](https://img.shields.io/github/last-commit/komodoplatform/komodo)](https://github.com/KomodoPlatform/komodo/graphs/commit-activity)
+# Squishy Core
 
-[![gitstars](https://img.shields.io/github/stars/komodoplatform/komodo?style=social)](https://github.com/KomodoPlatform/komodo/stargazers)
-[![twitter](https://img.shields.io/twitter/follow/komodoplatform?style=social)](https://twitter.com/komodoplatform)
-[![discord](https://img.shields.io/discord/412898016371015680)](https://discord.gg/tvp96Gf)
+![](./doc/imgs/squishy-logo2.png)
 
----
-![Komodo Logo](https://i.imgur.com/E8LtkAa.png "Komodo Logo")
+Squishy Core is the native daemon for SQCN. It's available for three OS platforms - Windows, Linux, MacOS.
 
+Use the following scripts to build:
 
-## Komodo
+- Linux: `build.sh` (native build)
+- Windows: `build-win.sh` (cross-compilation for Win)
+- MacOS: `build-mac-cross.sh` (cross-compilation for OSX)
+- MacOS: `build-mac.sh` (native build)
 
-This is the official Komodo sourcecode repository based on https://github.com/jl777/komodo. 
-
-## Development Resources
-
-- Komodo Website: [https://komodoplatform.com](https://komodoplatform.com/)
-- Komodo Blockexplorer: [https://kmdexplorer.io](https://kmdexplorer.io/)
-- Komodo Discord: [https://komodoplatform.com/discord](https://komodoplatform.com/discord)
-- Forum: [https://forum.komodoplatform.com](https://forum.komodoplatform.com/)
-- Mail: [info@komodoplatform.com](mailto:info@komodoplatform.com)
-- Support: [https://support.komodoplatform.com/support/home](https://support.komodoplatform.com/support/home)
-- Knowledgebase & How-to: [https://support.komodoplatform.com/en/support/solutions](https://support.komodoplatform.com/en/support/solutions)
-- API references & Dev Documentation: [https://developers.komodoplatform.com](https://developers.komodoplatform.com/)
-- Blog: [https://blog.komodoplatform.com](https://blog.komodoplatform.com/)
-- Whitepaper: [Komodo Whitepaper](https://komodoplatform.com/whitepaper)
-- Komodo Platform public material: [Komodo Platform public material](https://docs.google.com/document/d/1AbhWrtagu4vYdkl-vsWz-HSNyNvK-W-ZasHCqe7CZy0)
-
-## List of Komodo Platform Technologies
-
-- Delayed Proof of Work (dPoW) - Additional security layer and Komodos own consensus algorithm  
-- zk-SNARKs - Komodo Platform's privacy technology for shielded transactions  
-- Tokens/Assets Technology - create "colored coins" on the Komodo Platform and use them as a layer for securites  
-- Reward API - Komodo CC technology for securities  
-- CC - Crypto Conditions to realize "smart contract" logic on top of the Komodo Platform  
-- Jumblr - Decentralized tumbler for KMD and other cryptocurrencies  
-- Assetchains - Create your own Blockchain that inherits all Komodo Platform functionalities and blockchain interoperability  
-- Pegged Assets - Chains that maintain a peg to fiat currencies  
-- Peerchains - Scalability solution where sibling chains form a network of blockchains  
-- More in depth covered [here](https://docs.google.com/document/d/1AbhWrtagu4vYdkl-vsWz-HSNyNvK-W-ZasHCqe7CZy0)  
-- Also note you receive 5% Active User Reward on your balance.  
-[See this article for more details](https://support.komodoplatform.com/en/support/solutions/articles/29000024515-how-to-claim-the-kmd-active-user-reward-in-agama)
 
 ## Tech Specification
-- Max Supply: 200 million KMD
-- Block Time: 60 seconds
-- Block Reward: 3 KMD
-- Mining Algorithm: Equihash
+- 23,000,000 max coin amount
+- 100 coin block reward for era 1 (6 total eras 100, 25, 12.5, 6.25, 3.125, 1.5625)
+- 7 min block time
+- 25% staking rewards
+- Mining Algorithm: Equihash 200,9
 
-## About this Project
-Komodo is based on Zcash and has been extended by our innovative consensus algorithm called dPoW which utilizes Bitcoin's hashrate to store Komodo blockchain information into the Bitcoin blockchain. Other new and native Komodo features are the privacy technology called JUMBLR, our assetchain capabilities (one click plug and play blockchain solutions) and a set of financial decentralization and interoperability technologies. More details are available under https://komodoplatform.com/ and https://blog.komodoplatform.com.
+## Connect
+
+Discord Server ([SquishyCoin](https://discord.com/invite/zxbBrzAqhZ))
 
 ## Getting started
+
+```shell
+# Start with Komodo - RECOMMENDED!!
+./komodod -ac_name=SQCN -ac_supply=1468750 -ac_eras=6 -ac_blocktime=420 -ac_reward=10000000000,2500000000,1250000000,625000000,312500000,156250000 -ac_end=10000,100000,500000,1500000,2500000,5000000 -ac_staked=25 -ac_sapling=1 -ac_cbmaturity=6 -ac_cc=0 -addnode=146.190.69.236 -addnode=146.190.69.236
+```
 
 ### Dependencies
 
