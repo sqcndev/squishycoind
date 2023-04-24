@@ -37,12 +37,9 @@ Discord Server ([SquishyCoin](https://discord.com/invite/zxbBrzAqhZ))
 sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python python-zmq zlib1g-dev wget libcurl4-gnutls-dev bsdmainutils automake curl libsodium-dev
 ```
 
-### Build Komodo
+### Build Squishy
 
-This software is based on zcash and considered experimental and is continously undergoing heavy development.
-
-The dev branch is considered the bleeding edge codebase while the master-branch is considered tested (unit tests, runtime tests, functionality). At no point of time do the Komodo Platform developers take any responsbility for any damage out of the usage of this software. 
-Komodo builds for all operating systems out of the same codebase. Follow the OS specific instructions from below.
+This software is based on Komodo and considered experimental and is continously undergoing heavy development.
 
 #### Linux
 ```shell
@@ -71,7 +68,7 @@ brew install binutils
 brew install protobuf
 brew install coreutils
 brew install wget
-# Clone the Komodo repo
+# Clone the Squishy repo
 git clone https://github.com/sqcndev/squishycoind.git
 # Change master branch to other branch you wish to compile
 cd komodo
@@ -99,9 +96,9 @@ cd komodo
 ./zcutil/build-win.sh -j$(expr $(nproc) - 1)
 #This can take some time.
 ```
-**komodo is experimental and a work-in-progress.** Use at your own risk.
+**squishy is experimental and a work-in-progress.** Use at your own risk.
 
-To reset the Komodo blockchain change into the *~/.komodo* data directory and delete the corresponding files by running `rm -rf blocks chainstate debug.log komodostate db.log`
+To reset the Squishy blockchain change into the *~/.komodo/SQCN* data directory and delete the corresponding files by running `rm -rf blocks chainstate debug.log komodostate db.log`
 
 #### Create SQCN.conf
 
@@ -118,8 +115,6 @@ addnode=146.190.69.236
 addnode=64.225.91.174
 
 ```
-
-**Komodo is based on Zcash which is unfinished and highly experimental.** Use at your own risk.
 
 License
 -------
